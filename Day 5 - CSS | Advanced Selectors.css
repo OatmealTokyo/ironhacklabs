@@ -1,0 +1,88 @@
+/* In this example, the <ul> is a parent to every <li> . Those <li> elements are its children.
+
+<ul>
+  <li class="menu-item"></li>
+  <li class="menu-item"></li>
+</ul>
+
+*/
+
+parent > child {
+  property: value;
+}
+
+<ul>
+  <li class="menu-item"></li>
+  <li class="menu-item"></li>
+  <li class="menu-item"></li>
+  <li class="menu-item"></li>
+  <li class="menu-item"></li>
+</ul>
+
+.menu-item {
+  width: 100px;
+  height: 50px;
+}
+
+/* Direct Descendants */
+<ul id="menu">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+</ul>
+
+#menu > li {
+  width: 100px;
+  height: 50px;
+}
+
+/* Descendant Selector */
+selector1 selector2 {
+  property: value;
+}
+
+<p>IronHack <em>Descendant</em> Selectors</p>
+<ul>
+  <li>item 1</li>
+  <li>item 2</li>
+  <li><em>item 3</em></li>
+</ul>
+
+ul em {
+  color: red
+}
+
+/* Adjacent Sibling */
+formerElement + targetElement {
+  property: value;
+}
+
+/* All DIVs Green by default */
+div           { background-color: green;}
+
+/* ID=former... make it red*/
+#former       { background-color: red; }
+
+/* First adjacent sibling of #former is YELLOW */
+#former + div { background-color: yellow; }
+
+<div>
+  <div>before FORMER</div>
+  <div>before FORMER</div>
+  <div id="former">#former</div>
+  <div>next to FORMER</div>
+  <div>last one...</div>
+  <div>last one...</div>
+</div>
+
+/* Multiple Selection */
+
+selector1, selector2 {
+  property: value;
+}
+
+h1, h2 {
+  color: blue;
+}

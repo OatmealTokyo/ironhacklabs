@@ -1,0 +1,21 @@
+body {
+  background-color:  #E9E6E6
+}
+
+div {
+  background-color: #78F0B7;
+  border: 2px solid #178C55;
+  width: 600px;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  margin: 10px 10px 40px 20px;
+  
+}
+div1 {
+  background-color: #24CCDA;
+  width: 600px;
+  font-size: 16px;
+  color: white;
+  text-align: left;
+}
