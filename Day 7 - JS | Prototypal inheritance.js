@@ -199,6 +199,7 @@ function Dog (name, owner){
 Dog.prototype = Object.create(Animal.prototype);
 Dog.prototype.constructor = Dog;
 
+var myAnimal = new Animal("Arya", "Josephine", "--");
 var myDog = new Dog("Max",  "Owen");
 
 // apply to fruit
@@ -278,5 +279,25 @@ myAnimal.owner = "Ironhack";
 
 myAnimal.__proto__.showOwnerName();
 
-//Create a method isHealthy for Product, allowing every Product and Fruit objects to execute it.
+//Create a method isHealthy for Product(item?), allowing every Product and Fruit objects to execute it.
 //By default, this method will return false. Overwrite the method in the Fruit’s prototype to return true.
+
+function Item(name, price, isHealthy){
+  this.name = name;
+  this.price = price;
+  this.isHealthy = false;
+}
+
+function Fruit(name, price, isHealthy) {
+    Item.call(this, name, price, isHealthy);
+    this.expirationDate = '12/01/2017';
+    this.brand = 'Acme';
+    this.__proto__.isHealthy = true;
+}
+
+watermelon.isHealthy = function() {
+  return isHealthy = true;
+}
+function () {
+  return isHealthy = true;
+}
